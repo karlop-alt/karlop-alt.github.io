@@ -1,1 +1,1 @@
-alert("¡Hola, bienvenidx a mi página");
+alert("¡SUKAKUS!");

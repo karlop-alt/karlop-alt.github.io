@@ -1,35 +1,138 @@
+/*Selector universal*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family:cursive;
     background-color:rgb(101, 20, 20);
-    margin: 1;
+    color:black;
 }
-
-header{
+/*--------------- HEADER ---------------*/
+.header{
     text-align: center;
-    padding: 20px;
+    padding: 50xp 20px;
+    background: linear-gradient(rgb(50, 0, 0), rgb(150, 0, 0));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
 }
 
+.header h1{
+    text-shadow: 2px 2px 4px rgba(95, 0, 0, 0.710);
+    margin-bottom: 40px;
+}
+
+.subtitulo{
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/*--------------- NAV ---------------*/
 nav{
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background-color: brown;
+    flex-wrap: wrap;
 }
 
 nav a{
     text-decoration: none;
-    margin: 15px;
-    color: black;
+    color:burlywood;
     font-size: 18px;
+    padding: 8px 16px;
+    transition: color 0.3s;
 }
 
-nav a hover{
-    color: beige;
+nav a:hover{
+    color: rgba(95, 0, 0, 0.710);
 }
 
-section{
-    padding: 40px;
+/*--------------- SECCIONES ---------------*/
+.seccion{
+    padding: 50px 20px;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
-footer{
+.seccion h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: brown;
+}
+/*--------------- SOBRE MI ---------------*/
+.sobre-mi-contenido{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.sobre-mi-contenido img{
+    width: 35%;
+    object-fit: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.texto{
+    max-width: 50%;
+    text-align: justify;
+}
+
+/*--------------- PROYECTOS ---------------*/
+
+.proyecto-card{
+    text-align: center;
+    background-color: wheat;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    max-width: 33%;
+    margin: 0 auto;
+}
+
+.proyecto-card img{
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+    margin-bottom: 20%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+}
+
+/*--------------- HABILIDADES ---------------*/
+.habilidades-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin: 0;
+}
+.habilidad{
+    background-color:rgb(50, 0, 0);
+    color: brown;
+    text-align: center;
+    padding: 25%;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.habilidad:hover{
+    transform: translateY(-5px);
+    background-color:rgba(50, 0, 0, 0.411);
+}
+
+footer {
     text-align: center;
     padding: 20px;
     background-color: rgb(80, 13, 13);
@@ -37,33 +140,56 @@ footer{
     margin-top: 60px;
 }
 
-img{
+img{    
     width: 60%;
     border-radius: 10%;
 }
-
+/*--------------- MEDIA QUERYS ---------------*/
 @media (max-width: 600px) {
-    header {
+    
+    .header {
         padding: 10px;
     }
     nav{
-        padding: 0px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
     nav a{
-        display:block;
-        margin: 10px;
+        padding: 6px;
         }
 
-    section {
+    .section {
         text-align: center;
         padding: 0px;
+        max-width: 100%;
+    }
+    .sobre-mi-contenido{
+        flex-direction: column;
+    }
+    
+    .sobre-mi-contenido img{
+        width: 70%;
     }
 
-    h1 {
-        font-size: 20px;
+    .texto{
+        max-width: 80%;
+        margin-bottom: 20px;
     }
 
-    img{
-        width: 80px;
+    .cards{
+        flex-direction: column;
+        gap: 0;
     }
+
+    .proyecto-card{
+        margin: 5%;
+        max-width: 90%;
+    
+    }
+
+    .proyecto-card img{
+        margin-bottom: 0;
+    }
+
 }

@@ -6,37 +6,79 @@
     <title>Mi primera página</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <header>
+    <header class="header">
         <h1>Mi primer página web</h1>
-        <p>Bienvenidxs a mi sitio</p>
+        <p class="subtitulo">Bienvenidxs a mi sitio</p>
     </header>
     
-    <nav>
+    <nav class="menu">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#proyectos">Mis proyectos</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="https://www.google.com">Google</a>
     </nav>
 
-    <section id="sobre-mi">
-        <h2>Sobre mi</h2>
-        <img src="./img/led.jpg" alt="">
-        <p>Soy una estudiante de programación web</p>
-    </section>
+    <main>
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre mi</h2>
+            <div class="sobre-mi-contenido">
+                <img src="./img/led.jpg" alt="cara">
+                <div class="texto">
+                    <p>Soy una estudiante de programación web</p>
+                    <br>
+                    <p>
+                        Esta es mi segunda carrera.
+                        Tengo 31 años.
+                    </p>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Debitis iure repellat, quae omnis, animi placeat earum est 
+                        doloribus maiores blanditiis dolores iste voluptas. 
+                        Ut possimus ab ex, repellat dolores necessitatibus.
+                    </p>
+                </div>
+            </div>
+        </section>
     
-    <section id="proyectos">
-        <h2>Mis proyectos</h2>
-        <img src="./img/mano.jpg" alt="">
-        <p>Estos son mis proyectos de los últimos tres años</p>
-    </section>
+        <section id="proyectos" class="seccion">
+            <h2>Mis proyectos</h2>
+            <div class="cards">
+                 <div class="proyecto-card">
+                    <img src="./img/mano.jpg" alt="mano">
+                    <p>A little closerrrrr</p>
+                </div>
 
-    <footer>
-        <p>Mi página web</p>
+                <div class="proyecto-card">
+                    <img src="./img/heart.jpg" alt="corazon">
+                    <p>Outlineddddd</p>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="./img/flores.jpg" alt="flores">
+                    <p>Softtttt bloom</p>
+                </div>
+            </div>
+           
+        </section>
+
+        <section id="habilidades" class="seccion">
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="habilidad">Python</div>
+                <div class="habilidad">SQL</div>
+                <div class="habilidad">HTML</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Mi página web &copy; 2026 | Karla Corona</p>
     </footer>
 
 </body>
 
 <script src="script.js"></script>
-
-
 </html>
