@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera página</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <header class="header">
-        <h1>Mi primer página web</h1>
-        <p class="subtitulo">Bienvenidxs a mi sitio</p>
+        <h1 data-aos="flip-down" data-aos-duration="3000">Mi primer página web</h1>
+        <p data-aos="flip-up" data-aos-duration="3000" class="subtitulo">Bienvenidxs a mi sitio</p>
     </header>
     
     <nav class="menu">
@@ -22,7 +23,7 @@
 
     <main>
         <section id="sobre-mi" class="seccion">
-            <h2>Sobre mi</h2>
+            <h2 data-aos="flip-up" data-aos-duration="3000">Sobre mi</h2>
             <div class="sobre-mi-contenido">
                 <img src="./img/led.jpg" alt="cara">
                 <div class="texto">
@@ -46,17 +47,17 @@
         <section id="proyectos" class="seccion">
             <h2>Mis proyectos</h2>
             <div class="cards">
-                 <div class="proyecto-card">
+                 <div class="proyecto-card" data-aos="fade-up" data-aos-duration="1000" >
                     <img src="./img/mano.jpg" alt="mano">
                     <p>A little closerrrrr</p>
                 </div>
 
-                <div class="proyecto-card">
+                <div class="proyecto-card" data-aos="fade-up" data-aos-duration="2000">
                     <img src="./img/heart.jpg" alt="corazon">
                     <p>Outlineddddd</p>
                 </div>
 
-                <div class="proyecto-card">
+                <div class="proyecto-card" data-aos="fade-up" data-aos-duration="3000" >
                     <img src="./img/flores.jpg" alt="flores">
                     <p>Softtttt bloom</p>
                 </div>
@@ -65,13 +66,19 @@
         </section>
 
         <section id="habilidades" class="seccion">
-            <h2>Habilidades</h2>
+            <h2 data-aos="flip-up" data-aos-duration="3000" >Habilidades</h2>
             <div class="habilidades-grid">
-                <div class="habilidad">Python</div>
-                <div class="habilidad">SQL</div>
-                <div class="habilidad">HTML</div>
+                <div class="habilidad" data-aos="fade-up" data-aos-duration="1000" >Python</div>
+                <div class="habilidad" data-aos="fade-up" data-aos-duration="2000">SQL</div>
+                <div class="habilidad" data-aos="fade-up" data-aos-duration="3000">HTML</div>
             </div>
         </section>
+
+        <section class="seccion contador-seccion">
+            <h2 id="numero">0</h2>
+            <button id="btn-contador" type="button">Hacer click</button>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -80,5 +87,9 @@
 
 </body>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="script.js"></script>
 </html>

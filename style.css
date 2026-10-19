@@ -144,6 +144,37 @@ img{
     width: 60%;
     border-radius: 10%;
 }
+
+.contador-seccion{
+    text-align: center;
+}
+
+#btn-contador{
+    background-color: darkred;
+    color: burlywood;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3, transform 0.3s;
+}
+
+#btn-contador:hover{
+    background-color: brown;
+    transform: translateY(-2px);
+}
+
+#btn-contador:active{
+    transform: translateY(0);
+}
+
+body.oscuro #btn-contador:hover {
+    background-color: black;
+    color:firebrick
+
+}
+
 /*--------------- MEDIA QUERYS ---------------*/
 @media (max-width: 600px) {
     
