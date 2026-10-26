@@ -1,20 +1,25 @@
+/*--------------- MENSAJE DE BIENVENIDA ---------------*/
 
-console.log("Hola, este es un saludo desde el script");
+console.log("¡Bienvenidxs a mi primera página web!");
 
-const btnTema = document.getElementById("btn-tema");
-const body = document.body;
+/*--------------- CONTADOR INTERACTIVO ---------------*/
 
-if (btnTema) {
-    btnTema.addEventListener("change", () => {
-        body.classList.toggle("oscuro", btnTema.checked);
-    });
-}
-
+// Obtenemos los elementos del HTML
 const numero = document.getElementById("numero");
 const btnContador = document.getElementById("btn-contador");
+
+// Inicializamos el contador en cero
 let contador = 0;
 
-btnContador.addEventListener("click", () => {
-    contador++;
-    numero.textContent = contador;
-});
+// Detectamos cuando el usuario hace clic
+if (numero && btnContador) {
+    btnContador.addEventListener("click", () => {
+
+        // Incrementamos el contador
+        contador++;
+
+        // Actualizamos el número en la página
+        numero.textContent = contador;
+
+    });
+}

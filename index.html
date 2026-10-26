@@ -1,95 +1,243 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera página</title>
+    <title>Mi primera página | Karla Corona</title>
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Framework Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animaciones AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Nuestros estilos -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header class="header">
-        <h1 data-aos="flip-down" data-aos-duration="3000">Mi primer página web</h1>
-        <p data-aos="flip-up" data-aos-duration="3000" class="subtitulo">Bienvenidxs a mi sitio</p>
+        <h1 data-aos="flip-down" data-aos-duration="1500">
+            Mi primera página web
+        </h1>
+        <p class="subtitulo" data-aos="flip-up" data-aos-duration="1500">
+            Bienvenidxs a mi sitio
+        </p>
     </header>
-    
-    <nav class="menu">
+
+    <!-- NAVEGACIÓN -->
+    <nav class="menu" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Mis proyectos</a>
+        <a href="#intereses">Mis intereses</a>
         <a href="#habilidades">Habilidades</a>
-        <a href="https://www.google.com">Google</a>
+        <a href="#detras-del-codigo">Detrás del código</a>
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            Google
+        </a>
     </nav>
 
     <main>
+
+        <!-- SOBRE MÍ -->
         <section id="sobre-mi" class="seccion">
-            <h2 data-aos="flip-up" data-aos-duration="3000">Sobre mi</h2>
+            <h2 data-aos="flip-up">Sobre mí</h2>
+
             <div class="sobre-mi-contenido">
-                <img src="./img/led.jpg" alt="cara">
+                <img src="./img/led.jpg"
+                     alt="Imagen de presentación personal">
+
                 <div class="texto">
-                    <p>Soy una estudiante de programación web</p>
-                    <br>
-                    <p>
-                        Esta es mi segunda carrera.
-                        Tengo 31 años.
+                     <p>
+                        ¡Hola! Mi nombre es Karla, tengo 31 años y actualmente
+                        estudio la carrera de Programación y Transformación Digital.
+                        Esta es mi segunda carrera, ya que anteriormente estudié
+                        Diseño y Publicidad en Moda.
                     </p>
-                    <br>
+
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Debitis iure repellat, quae omnis, animi placeat earum est 
-                        doloribus maiores blanditiis dolores iste voluptas. 
-                        Ut possimus ab ex, repellat dolores necessitatibus.
+                        Durante mucho tiempo pensé que ambas carreras no tenían
+                        absolutamente nada que ver entre sí. Sin embargo, gracias
+                        a esta clase y a la creación de este proyecto, descubrí
+                        que estaba equivocada.
+                    </p>
+
+                    <p>
+                        Diseñar esta página me permitió aplicar muchos de los
+                        conocimientos que adquirí durante mi primera carrera:
+                        la selección de una paleta de colores, la tipografía,
+                        la distribución de los elementos, la composición visual
+                        y el uso de acentos para crear una identidad propia.
+                    </p>
+
+                    <p>
+                        Por eso, esta página representa algo muy importante
+                        para mí: <strong>la unión de dos partes de mi vida que
+                        creía completamente separadas, pero que hoy descubro
+                        que se complementan y forman parte de la persona
+                        que soy.</strong>
+                    </p>
+
+                    <p>
+                        Gracias por visitar mi página.
+                        ¡Espero que la encuentres interesante! :)
                     </p>
                 </div>
             </div>
         </section>
-    
-        <section id="proyectos" class="seccion">
-            <h2>Mis proyectos</h2>
-            <div class="cards">
-                 <div class="proyecto-card" data-aos="fade-up" data-aos-duration="1000" >
-                    <img src="./img/mano.jpg" alt="mano">
-                    <p>A little closerrrrr</p>
+
+        <!-- MIS INTERESES -->
+        <section id="intereses" class="seccion">
+            <h2 data-aos="fade-up">Mis intereses</h2>
+
+            <!-- Sistema de columnas de Bootstrap -->
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4"
+                     data-aos="fade-up"
+                     data-aos-duration="1000">
+                    <div class="proyecto-card">
+                        <img src="./img/mano.jpg"
+                             alt="Primer interes">
+                        <h3>Second Skin</h3>
+                        <p class="interes-subtitulo">01 / Fashion</p>
+                    </div>
                 </div>
 
-                <div class="proyecto-card" data-aos="fade-up" data-aos-duration="2000">
-                    <img src="./img/heart.jpg" alt="corazon">
-                    <p>Outlineddddd</p>
+                <div class="col-12 col-md-4"
+                     data-aos="fade-up"
+                     data-aos-duration="1500">
+                    <div class="proyecto-card">
+                        <img src="./img/heart.jpg"
+                             alt="Segundo interes">
+                        <h3>Paper Souls</h3>
+                        <p class="interes-subtitulo">02 / Literature</p>
+                    </div>
                 </div>
 
-                <div class="proyecto-card" data-aos="fade-up" data-aos-duration="3000" >
-                    <img src="./img/flores.jpg" alt="flores">
-                    <p>Softtttt bloom</p>
+                <div class="col-12 col-md-4"
+                     data-aos="fade-up"
+                     data-aos-duration="2000">
+                    <div class="proyecto-card">
+                        <img src="./img/flores.jpg"
+                             alt="Tercer interes">
+                        <h3>Sweet Dissonance</h3>
+                        <p class="interes-subtitulo">03 / Music</p>
+                    </div>
                 </div>
+
             </div>
-           
         </section>
 
+        <!-- HABILIDADES -->
         <section id="habilidades" class="seccion">
-            <h2 data-aos="flip-up" data-aos-duration="3000" >Habilidades</h2>
+            <h2 data-aos="flip-up">Habilidades</h2>
+
             <div class="habilidades-grid">
-                <div class="habilidad" data-aos="fade-up" data-aos-duration="1000" >Python</div>
-                <div class="habilidad" data-aos="fade-up" data-aos-duration="2000">SQL</div>
-                <div class="habilidad" data-aos="fade-up" data-aos-duration="3000">HTML</div>
+                <div class="habilidad" data-aos="fade-up">HTML5</div>
+                <div class="habilidad" data-aos="fade-up">CSS3</div>
+                <div class="habilidad" data-aos="fade-up">JavaScript</div>
+                <div class="habilidad" data-aos="fade-up">Python</div>
+                <div class="habilidad" data-aos="fade-up">SQL</div>
+                <div class="habilidad" data-aos="fade-up">Bootstrap 5</div>
+                <div class="habilidad" data-aos="fade-up">GitHub</div>
+                <div class="habilidad" data-aos="fade-up">VS Code</div>
+                <div class="habilidad" data-aos="fade-up">AOS</div>
             </div>
         </section>
 
+        <!-- DETRÁS DEL CÓDIGO -->
+        <section id="detras-del-codigo" class="seccion">
+            <h2 data-aos="flip-up">Detrás del código</h2>
+
+            <p class="codigo-intro" data-aos="fade-up">
+                Este proyecto representa mis primeros pasos en el
+                diseño y desarrollo web. Durante su creación descubrí
+                que programar no consiste solamente en escribir código,
+                sino también en experimentar, resolver problemas y
+                transformar ideas en algo funcional.
+            </p>
+
+            <!-- Tarjetas con Bootstrap -->
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6"
+                     data-aos="fade-up"
+                     data-aos-duration="1000">
+
+                    <div class="proceso-card">
+                        <h3>El proceso</h3>
+                        <p>
+                            Comencé organizando la estructura de mi
+                            página y diseñando cada sección.
+                            Experimenté con diferentes estilos,
+                            imágenes y animaciones hasta encontrar
+                            una presentación que reflejara mis ideas.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6"
+                     data-aos="fade-up"
+                     data-aos-duration="1500">
+
+                    <div class="proceso-card desafios">
+                        <h3>Los desafíos</h3>
+                        <p>
+                            Uno de mis primeros retos fue conseguir
+                            que las imágenes aparecieran correctamente.
+                            Aprendí a organizar los archivos, corregir
+                            las rutas y probar los cambios antes de
+                            publicarlos en GitHub.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTADOR INTERACTIVO -->
         <section class="seccion contador-seccion">
             <h2 id="numero">0</h2>
-            <button id="btn-contador" type="button">Hacer click</button>
+
+            <button id="btn-contador"
+                    type="button"
+                    class="btn">
+                Hacer clic
+            </button>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <p>Mi página web &copy; 2026 | Karla Corona</p>
     </footer>
 
-</body>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<script src="script.js"></script>
+    <!-- Animaciones AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    </script>
+
+    <!-- Nuestro JavaScript -->
+    <script src="./script.js"></script>
+
+</body>
 </html>

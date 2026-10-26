@@ -1,226 +1,396 @@
-/*Selector universal*/
-*{
+
+/*--------------- COLORES Y TIPOGRAFÍA ---------------*/
+:root {
+    --pear: #fbfffc;
+    --lavender: #949dcf;
+    --cherries: #000000;
+    --fondo: #dee892;
+    --texto: #5a0725;
+    --blanco: #bd1b57;
+}
+
+/*--------------- ESTILOS GENERALES ---------------*/
+* {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
-    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
 }
 
-body{
-    font-family:cursive;
-    background-color:rgb(101, 20, 20);
-    color:black;
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
 }
+
+img {
+    max-width: 100%;
+}
+
 /*--------------- HEADER ---------------*/
-.header{
+.header {
     text-align: center;
-    padding: 50xp 20px;
-    background: linear-gradient(rgb(50, 0, 0), rgb(150, 0, 0));
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    color: rgb(0, 0, 0);
+    padding: 85px 20px;
+    background: linear-gradient(135deg, #E5E7F5, var(--lavender));
+    color: var(--texto);
 }
 
-.header h1{
-    text-shadow: 2px 2px 4px rgba(95, 0, 0, 0.710);
-    margin-bottom: 40px;
+.header h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin-bottom: 20px;
 }
 
-.subtitulo{
-    font-size: 20px;
-    opacity: 0.9;
+.subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
-/*--------------- NAV ---------------*/
-nav{
+/*--------------- NAVEGACIÓN ---------------*/
+.menu {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 15px;
-    background-color: brown;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px;
+    background-color: var(--lavender);
 }
 
-nav a{
+.menu a {
     text-decoration: none;
-    color:burlywood;
-    font-size: 18px;
-    padding: 8px 16px;
-    transition: color 0.3s;
+    color: var(--texto);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover{
-    color: rgba(95, 0, 0, 0.710);
+.menu a:hover {
+    background-color: var(--cherries);
+    color: var(--blanco);
 }
 
 /*--------------- SECCIONES ---------------*/
-.seccion{
-    padding: 50px 20px;
-    max-width: 70%;
+.seccion {
+    width: 90%;
+    max-width: 1100px;
+    padding: 65px 20px;
     margin: 0 auto;
 }
 
-.seccion h2{
+.seccion h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: brown;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    color: var(--cherries);
 }
-/*--------------- SOBRE MI ---------------*/
-.sobre-mi-contenido{
+
+/*--------------- SOBRE MÍ ---------------*/
+.sobre-mi-contenido {
     display: flex;
     align-items: center;
-    gap: 40px;
     justify-content: center;
+    gap: 40px;
 }
 
-.sobre-mi-contenido img{
-    width: 35%;
-    object-fit: center;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.sobre-mi-contenido img {
+    width: 32%;
+    max-width: 260px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.texto{
-    max-width: 50%;
-    text-align: justify;
+.texto {
+    max-width: 55%;
+    text-align: left;
 }
 
 /*--------------- PROYECTOS ---------------*/
-
-.proyecto-card{
-    text-align: center;
-    background-color: wheat;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    max-width: 33%;
-    margin: 0 auto;
-}
-
-.proyecto-card img{
-    width: 100%;
-    height: 80%;
-    border-radius: 12px;
-    margin-bottom: 20%;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.cards{
+.cards {
     display: flex;
-    gap: 20px;
+    gap: 24px;
 }
 
-/*--------------- HABILIDADES ---------------*/
-.habilidades-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    max-width: 100%;
-    margin: 0;
-}
-.habilidad{
-    background-color:rgb(50, 0, 0);
-    color: brown;
+.proyecto-card {
+    flex: 1;
+    min-width: 0;
     text-align: center;
-    padding: 25%;
-    border-radius: 12px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s;
 }
 
-.habilidad:hover{
+.proyecto-card:hover {
+    transform: translateY(-6px);
+}
+
+.proyecto-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.proyecto-card p {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/*--------------- HABILIDADES ---------------*/
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.habilidad {
+    background-color: var(--lavender);
+    color: var(--texto);
+    text-align: center;
+    padding: 22px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.habilidad:nth-child(3n + 2) {
+    background-color: var(--pear);
+}
+
+.habilidad:nth-child(3n + 3) {
+    background-color: #E8D8EE;
+}
+
+.habilidad:hover {
     transform: translateY(-5px);
-    background-color:rgba(50, 0, 0, 0.411);
 }
 
-footer {
+/*--------------- DETRÁS DEL CÓDIGO ---------------*/
+.codigo-intro {
     text-align: center;
-    padding: 20px;
-    background-color: rgb(80, 13, 13);
-    color:burlywood;
-    margin-top: 60px;
+    max-width: 750px;
+    margin: 0 auto 35px;
 }
 
-img{    
-    width: 60%;
-    border-radius: 10%;
+.proceso-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: #E5E7F5;
 }
 
-.contador-seccion{
+.proceso-card.desafios {
+    background-color: #EAF1BE;
+}
+
+.proceso-card h3 {
+    color: var(--texto);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.proceso-card p {
+    margin-bottom: 0;
+}
+
+/*--------------- CONTADOR ---------------*/
+.contador-seccion {
     text-align: center;
 }
 
-#btn-contador{
-    background-color: darkred;
-    color: burlywood;
+#numero {
+    font-size: 3rem;
+    color: var(--cherries);
+}
+
+#btn-contador {
+    background-color: var(--cherries);
+    color: var(--blanco);
     border: none;
     padding: 14px 32px;
     border-radius: 10px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3, transform 0.3s;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#btn-contador:hover{
-    background-color: brown;
+#btn-contador:hover {
+    background-color: #78183C;
     transform: translateY(-2px);
 }
 
-#btn-contador:active{
+#btn-contador:active {
     transform: translateY(0);
 }
 
-body.oscuro #btn-contador:hover {
-    background-color: black;
-    color:firebrick
-
+/*--------------- FOOTER ---------------*/
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--texto);
+    color: var(--blanco);
+    margin-top: 60px;
 }
 
-/*--------------- MEDIA QUERYS ---------------*/
-@media (max-width: 600px) {
-    
-    .header {
-        padding: 10px;
-    }
-    nav{
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    nav a{
-        padding: 6px;
-        }
+.footer p {
+    margin-bottom: 0;
+}
 
-    .section {
-        text-align: center;
-        padding: 0px;
+/*--------------- DISEÑO RESPONSIVO ---------------*/
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 20px;
+    }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+    }
+
+    .seccion {
+        width: 100%;
+        padding: 45px 20px;
+    }
+
+    .sobre-mi-contenido {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .sobre-mi-contenido img {
+        width: 60%;
+        max-width: 250px;
+    }
+
+    .texto {
         max-width: 100%;
     }
-    .sobre-mi-contenido{
+
+    .cards {
         flex-direction: column;
     }
-    
-    .sobre-mi-contenido img{
-        width: 70%;
-    }
 
-    .texto{
-        max-width: 80%;
-        margin-bottom: 20px;
+    .habilidades-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
 
-    .cards{
-        flex-direction: column;
-        gap: 0;
+@media (max-width: 400px) {
+    .habilidades-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    .proyecto-card{
-        margin: 5%;
-        max-width: 90%;
-    
-    }
+/*--------------- AJUSTES FINALES ---------------*/
 
-    .proyecto-card img{
-        margin-bottom: 0;
-    }
+/* Texto claro en botones y navegación */
+.menu a:hover,
+#btn-contador,
+#btn-contador:hover {
+    color: var(--pear);
+}
 
+/* Mejor contraste en el pie de página */
+.footer {
+    color: var(--pear);
+}
+
+/* Tarjetas de proyectos con la misma altura */
+.proyecto-card {
+    height: 100%;
+}
+
+/*--------------- NUEVA TIPOGRAFÍA ---------------*/
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* Título principal */
+.header h1 {
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+/* Títulos de las secciones */
+.seccion h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: -1.5px;
+}
+
+/* Menú */
+.menu a {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Habilidades */
+.habilidad {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Nombres de los proyectos */
+.proyecto-card p {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Botón del contador */
+#btn-contador {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Títulos de las tarjetas */
+.proceso-card h3 {
+    letter-spacing: -0.5px;
+}
+
+/*--------------- TÍTULOS DE MIS INTERESES ---------------*/
+
+.proyecto-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+    color: var(--texto);
+}
+
+.proyecto-card .interes-subtitulo {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto);
+    opacity: 0.85;
+    margin-bottom: 0;
 }
